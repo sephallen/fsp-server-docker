@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  fspd:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: sephallen/fspd
+    container_name: fspd
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "7717:21/udp"
+    volumes:
+      - ./config/fspd.conf:/etc/fspd.conf
+      - ./share:/var/ftp
