@@ -1,3 +1,0 @@
-Download here:
-https://sourceforge.net/projects/fsp/files/fsp/2.8.1b29/fspd-2.8.1b29-2.el7.x86_64.rpm/download
-and rename to fspd.rpm
