@@ -27,14 +27,12 @@ To easily spin up an FSP share for all your GameCube game images (.iso, .gcz) to
 
 ### Usage
 1. Clone this repo or [download latest master branch](https://github.com/sephallen/fsp-server-docker/archive/master.zip) and extract its contents.
-2. Download your desired version of the [FSP](http://fsp.sourceforge.net/) daemon in its non debug, RPM form. The latest version as of writing can be downloaded [here](https://sourceforge.net/projects/fsp/files/fsp/2.8.1b29/fspd-2.8.1b29-2.el7.x86_64.rpm/download).
-3. Rename the isntaller to `fspd.rpm` and place it into the `installer` directory.
-4. Place your game images in the `share` directory. This path can be changed in the [docker-compose.yml](#docker-compose.yml) file if you wish.
-5. Run `docker-compose build` within the project directory to confirm everything is set up correctly.
-6. Run `docker-compose up -d` within the project directory to run the server as a background process. You can omit the `-d` if you wish to see a log from the container in your terminal.
-7. In Swiss, connect to your container via the host machine's local IP address and port number `7717`. By default, no password is set, so you can leave this blank.
+3. Place your game images in the `share` directory. This path can be changed in the [docker-compose.yml](#docker-compose.yml) file if you wish.
+4. Run `docker-compose build` within the project directory to confirm everything is set up correctly.
+5. Run `docker-compose up -d` within the project directory to run the server as a background process. You can omit the `-d` if you wish to see a log from the container in your terminal.
+6. In Swiss, connect to your container via the host machine's local IP address and port number `7717`. By default, no password is set, so you can leave this blank.
 
-Note: If you run into stablilty issues, you may need to adjust your packet size, see [Configuration](#packet-size).
+Note: If you run into stability issues, you may need to adjust your packet size, see [Configuration](#packet-size).
 
 Note: If you wish to add or remove games from your share, there is no need to rebuild or restart the container.
 
