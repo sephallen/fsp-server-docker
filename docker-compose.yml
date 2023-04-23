@@ -2,10 +2,7 @@ version: "3"
 
 services:
   fspd:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    image: sephallen/fspd
+    image: ghcr.io/sephallen/fsp-server-docker:latest
     container_name: fspd
     restart: unless-stopped
     tty: true
