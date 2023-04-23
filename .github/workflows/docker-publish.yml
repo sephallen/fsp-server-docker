@@ -40,9 +40,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ghcr.io/${{ github.repository }}
-          tags: |
-            sha_${{ github.sha }}
-            latest
+          tags: ${{ steps.meta.outputs.tags }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
